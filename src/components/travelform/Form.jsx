@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from "styled-components"
 import "bootstrap/dist/css/bootstrap.css";
+import 'bulma/css/bulma.min.css';
+import './button.css';
 const Form = () => {
 
 
@@ -9,39 +11,92 @@ const Form = () => {
 
     return (
         
-        <Card claseName="card">       
-          <div claseName="mb-3">
-            <label for="formFile" claseName="form-label">사진 업로드 </label>
-            <input claseName="form-control" type="file" id="formFile"/>
-          </div>  
+      <>
+      <div class="file has-name is-fullwidth">
+  <label class="file-label">
+    <input class="file-input" type="file" name="resume"/>
+    <span class="file-cta">
+      <span class="file-icon">
+        <i class="fas fa-upload"></i>
+      </span>
+      <span class="file-label">
+        Choose a file…
+      </span>
+    </span>
+    <span class="file-name">
+      Screen Shot 2017-07-29 at 15.54.25.png
+    </span>
+  </label>
+</div>
+<br/>
+    <fieldset disabled>
+    <label class="label"></label>
+    <div class="control has-icons-left">
+  <div class="select">
+    <select>
+      <option selected>City</option>
+      <option>Select dropdown</option>
+      <option>With options</option>
+    </select>
+  </div>
+  <div class="icon is-small is-left">
+    <i class="fas fa-globe"></i>
+  </div>
+</div>
+  <div class="field">
+    <label class="label">작성자</label>
+    <div class="control">
+      <input class="input" type="text" placeholder="e.g Alex Smith"/>
+    </div>
+  </div>
+  
+  <div class="field">
+    <label class="label">여행날짜</label>
+    <div class="control">
+      <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com"/>
+    </div>
 
+    
+  </div>
 
-          <div claseName="mb-3">
-            <label for="exampleFormControlInput1" claseName="form-label"></label>
-          작성자: <input type="email" claseName="form-control" id="exampleFormControlInput1" placeholder="입력해주세요"/>
-        </div>
+  <div class="field">
+    <label class="label">MBTI</label>
+    <div class="control">
+      <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com"/>
+    </div>
+   
+    
+  </div>
+  
 
-        
-        <div claseName="mb-3">
-            <label for="exampleFormControlInput1" claseName="form-label">여행날짜</label>
-            <input type="email" claseName="form-control" id="exampleFormControlInput1" placeholder="입력해주세요"/>
-        </div>
+  <div class="field">
+    <label class="label">Email</label>
+    <textarea class="textarea" placeholder="e.g. Hello world"></textarea>
 
-        
-        <div claseName="mb-3">
-            <label for="exampleFormControlInput1" claseName="form-label">MBTI</label>
-            <input type="email" claseName="form-control" id="exampleFormControlInput1" placeholder="입력해주세요"/>
-        </div>
+  </div>
+  
 
-        <div claseName="mb-3">
-            <label for="exampleFormControlTextarea1" claseName="form-label">내용</label>
-            <textarea claseName="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="입력해주세요"></textarea>
-        </div>
+  <div class="field">
+  <button class="button is-dark">작성완료!&nbsp;&nbsp;&nbsp;   
+    <h1>
+   
+    <span>.</span>
+    &nbsp;
+    <span>.</span>
+    &nbsp;
+    <span>.</span>
 
-        <button type="button" claseName="btn btn-outline-secondary">입력</button>
+  <span>🚅</span>
 
+</h1></button>
+     </div>
 
-        </Card>
+  
+  </fieldset>
+  
+    
+  
+  </>
     );
 
     
@@ -49,16 +104,6 @@ const Form = () => {
 
 
 
-const Card = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: solid #E0E0E0; 
-  border-width: thick;
-  border-radius: 10px;
-  width: 50%
 
-`;
 
 export default Form;
